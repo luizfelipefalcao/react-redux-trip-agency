@@ -18,7 +18,7 @@ export default function Reservas() {
       type="button"
       onClick={()=> {}}
       >
-        <MdDelete size={20} color="#191919" />
+        <MdDelete size={20} color='red' />
       </button>
     </div>
 
