@@ -7,11 +7,11 @@ import Reservas from './pages/Reservas';
 export default function Routes() {
  return (
 
-        <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route exact path='/reservas' component={Reservas}/>
-            <Route path='*' component={Home}/>
-        </Switch>
+    <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route exact path='/reservas' component={Reservas}/>
+        <Route path='*' component={Home}/>
+    </Switch>
 
  );
 }

@@ -20,7 +20,27 @@
     border: 0;
     background: #FFF;
   }
-  
+
+  .reservas .reserveSize {
+    display: flex;
+    align-items: center;
+  }
+
+  .reservas .reserveSize button {
+    outline: none;
+  }
+
+  .reservas .reserveSize input {
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    margin: 5px;
+    font-size: 12px
+  }
+
   footer button{
     border: 0;
     display: flex;

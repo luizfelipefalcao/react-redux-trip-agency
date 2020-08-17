@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import api from '../../services/api';
+import { addReserve } from '../../store/modules/reserve/actions';
 import './style.css';
 import { MdFlightTakeoff } from 'react-icons/md';
 
 export default function Home() {
 
+  const dispatch = useDispatch();
   const [trips, setTrips] = useState([]);
 
   useEffect(() => {
@@ -17,17 +20,22 @@ export default function Home() {
 
   }, []);
 
+  //Funcao handleAdd que lança um dispatch (com parametros obrigatorios type e o map)
+  function handleAdd(trip){
+    dispatch(addReserve(trip))
+  }
+
  return (
    <div className='box'>
-     {trips.map(item => (
-      <li key={item.id}>
-        <img src={item.image} alt={item.title}/>
-        <strong>{item.title}</strong>
-        <span>Status: {item.status ? 'Disponível' : 'Indosponível'}</span>
+     {trips.map(trip => (
+      <li key={trip.id}>
+        <img src={trip.image} alt={trip.title}/>
+        <strong>{trip.title}</strong>
+        <span>Status: {trip.status ? 'Disponível' : 'Indosponível'}</span>
 
         <button
           type='button'
-          onClick={() => {}}
+          onClick={() => handleAdd(trip) }
         >
           <div>
             <MdFlightTakeoff size={20} color='#eee'/>
