@@ -1,5 +1,5 @@
 {
-  "name": "redux-trips",
+  "name": "react-redux-tripagency",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
